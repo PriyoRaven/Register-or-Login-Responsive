@@ -2,9 +2,9 @@
 
 :root
 {
-    --first-color: rgb(42, 202, 255);
-    --first-color-light: rgb(136, 224, 253);
-    --second-color: rgb(244, 169, 58);
+    --first-color: radial-gradient(ellipse at bottom, #FF577F 20%, #FF884B 100%);
+    --first-color-light: #fdc6d3;
+    --second-color: #FFD384;
 }
 
 * {
@@ -44,11 +44,23 @@ span {
 	font-size: 12px;
 }
 
+#cross {
+	text-decoration: none;
+	position: absolute;
+	color: #FF577F;
+	background-color: transparent;
+	border: 0px;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	margin: 0 350px;
+}
+
 .fyp {
 	color: #333;
 	font-size: 14px;
 	text-decoration: none;
-	margin: 15px 0;
+	margin: 10px 0 0 0;
 }
 
 .buttn {
@@ -59,6 +71,7 @@ span {
 	font-size: 12px;
 	font-weight: 1000;
 	padding: 12px 45px;
+	margin-top: 20px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	transition:all 0.2s ease-in;
