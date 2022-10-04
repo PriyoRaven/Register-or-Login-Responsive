@@ -2,8 +2,9 @@
 
 :root
 {
-    --first-color: radial-gradient(ellipse at bottom, #FF577F 20%, #FF884B 100%);
-    --first-color-light: #fdc6d3;
+    --first-color: radial-gradient(ellipse at bottom, #4D77FF 20%, #56BBF1 100%);
+	--first-color-rev: radial-gradient(ellipse at bottom, #56BBF1 20%, #4D77FF 100%);
+    --first-color-light: #5EE6EB;
     --second-color: #FFD384;
 }
 
@@ -41,6 +42,73 @@ body {
 	margin: -20px 0 50px;
 }
 
+/* Popup */
+.popup {
+	background:transparent;
+	position:absolute;
+	margin-top: -250px;
+	z-index:100;
+	width:700px;
+	height:200px;
+	animation: translate-title 0.3s linear;
+}
+@keyframes translate-title {
+	0% {
+	  min-width: 100%;
+	  left: 0px;
+	}
+	70% {
+		min-width: 50%;
+		left: 550px;
+	}
+	100% {
+	  min-width: 0;
+	  left: 460px;
+	}
+}
+	  
+.s3-btn-close {
+	position:absolute;
+	top: -30px;
+	right: -25px;
+	width: 50px;
+	background:var(--first-color);
+	border:solid 2px white;
+	color:white;
+	cursor:pointer;
+	font-size: 20px;
+	border-radius: 50px;
+	z-index: 200;
+}
+.s3-btn-close:hover {
+	background: var(--first-color-rev);
+}
+
+input.s3-btn {
+	background:var(--first-color);
+	border-radius:30px;
+	width:170px;
+	height:50px;
+	cursor:pointer;
+	position:absolute;
+	top:0;
+	right:0;
+	color: white;
+	bottom:0;
+	left:0;
+	margin:auto;
+	transition: all 0.2s ease;
+	box-shadow:  0 14px 28px rgba(0,0,0,0.25);
+  }
+
+input.s3-btn:hover {
+	background: var(--first-color-rev);
+	font-size: larger;
+	font-weight: 600;
+	color: white;
+	border: 2px solid white;
+}
+
 h1 {
 	font-weight: bold;
 	margin: 0;
@@ -68,6 +136,9 @@ span {
 	font-size: 14px;
 	text-decoration: none;
 	margin: 10px 0 0 0;
+}
+.fyp:hover {
+	color: var(--second-color);
 }
 
 .buttn {

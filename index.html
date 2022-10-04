@@ -10,52 +10,59 @@
 </head>
 <body>
 
-	<div class="container" id="container">
+	<div class="popup" id="popup" style="display: none;">
+		<div class="popup-inner">
+			<input type="button" name="Close" class="s3-btn-close" onclick="popupClose();" value="&times;">
+				<div class="container" id="container">
 
-		<!-- signUp -->
-		<div class="form-container sign-up-container">
-			<form action="#">
-				<h1>Create Account</h1>
-				<span>Please use your email for registration</span>
-				<input type="text" placeholder="Name" />
-				<input type="email" placeholder="Email" />
-				<input type="password" placeholder="Password" />
-				<button class="buttn">Sign Up</button>
-			</form>
-		</div>
-
-		<!-- signIn -->
-		<div class="form-container sign-in-container">
-			<form action="#">
-				<h1>Sign in</h1>
-				<span>Please use the email of your account</span>
-				<input type="email" placeholder="Email" />
-				<input type="password" placeholder="Password" />
-				<a class="fyp" href="#">Forgot your password?</a>
-				<button class="buttn">Sign In</button>
-			</form>
-		</div>
-
-		<!-- The unselected option -->
-		<div class="overlay-container">
-			<div class="overlay">
-				<div class="overlay-panel overlay-left">
-					<h1>Welcome Back!</h1>
-					<p>Signed out? Why not sign in again.</p>
-					<button class="ghost" id="signIn">Sign In</button>
+				<!-- signUp -->
+				<div class="form-container sign-up-container">
+					<form action="#">
+						<h1>Create Account</h1>
+						<span>Please use your email for registration</span>
+						<input type="text" placeholder="Name" />
+						<input type="email" placeholder="Email" />
+						<input type="password" placeholder="Password" />
+						<button class="buttn">Sign Up</button>
+					</form>
 				</div>
-				<div class="overlay-panel overlay-right">
-					<h1>Hello, Friend!</h1>
-					<p>Join the community and let's grow up together.</p>
-					<button class="ghost" id="signUp">Sign Up</button>
+
+				<!-- signIn -->
+				<div class="form-container sign-in-container">
+					<form action="#">
+						<h1>Sign in</h1>
+						<span>Please use the email of your account</span>
+						<input type="email" placeholder="Email" />
+						<input type="password" placeholder="Password" />
+						<a class="fyp" href="#">Forgot your password?</a>
+						<button class="buttn">Sign In</button>
+					</form>
+				</div>
+
+				<!-- The unselected option -->
+				<div class="overlay-container">
+					<div class="overlay">
+						<div class="overlay-panel overlay-left">
+							<h1>Welcome Back!</h1>
+							<p>Signed out? Why not sign in again.</p>
+							<button class="ghost" id="signIn">Sign In</button>
+						</div>
+						<div class="overlay-panel overlay-right">
+							<h1>Hello, Friend!</h1>
+							<p>Join the community and let's grow up together.</p>
+							<button class="ghost" id="signUp">Sign Up</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<!-- button -->
+	<input type="button" class="s3-btn" name="open" onclick="popupOpen();" value="SignIn/SignUp">
 </body>
 
 <script src="/main.js"></script>
-<script src="/sign.js"></script>
+<script src="/pop.js"></script>
 </body>
 </html>
 
