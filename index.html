@@ -4,66 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup/Signin non responsive</title>
-	<link rel="icon" href="/signup.png">
+    <title>Document</title>
     <link rel="stylesheet" href="/style.css" type="text/css">
 </head>
 <body>
-
-	<div class="popup" id="popup" style="display: none;">
+    <div class="popup" id="popup" style="display: none;">
 		<div class="popup-inner">
-			<input type="button" name="Close" class="s3-btn-close" onclick="popupClose();" value="&times;">
-				<div class="container" id="container">
+            <!-- THE CONTAINER -->
+            <div class="container">
+                <input type="button" name="Close" class="s3-btn-close" onclick="popupClose();" value="&times;">
+                <!-- BACKGROUND / THE UNSELECTED PLACE -->
+                <div class="blueBg">
+                    <div class="box signin">
+                        <h2 class="signh2">Welcome Back!</h2>
+                        <button class="signm signinBtn">Sign in</button>
+                    </div>
+                    <div class="box signup">
+                        <h2 class="signh2">Hello there!</h2>
+                        <button class="signm signupBtn">Sign up</button>
+                    </div>
+                </div>
+                <div class="formBx">
+                    <!-- SIGNIN PLACE -->
+                    <div class="form signinForm">
+                        <form>
+                            <h3>Sign In</h3>
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="Password">
+                            <a href="#" class="forgot">forgot password?</a>
+                            <input type="submit" value="Login">
+                        </form>
+                    </div>
+                    <!-- SIGNUP PLACE -->
+                    <div class="form signupForm">
+                        <form>
+                            <h3>Sign Up</h3>
+                            <input type="text" placeholder="Username">
+                            <input type="text" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <input type="password" placeholder="Confirm Password">
+                            <input type="submit" value="Register">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- THE BUTTON -->
+    <input type="button" class="s3-btn" name="open" onclick="popupOpen();" value="SignIn/SignUp">
 
-				<!-- signUp -->
-				<div class="form-container sign-up-container">
-					<form action="#">
-						<h1>Create Account</h1>
-						<span>Please use your email for registration</span>
-						<input type="text" placeholder="Name" />
-						<input type="email" placeholder="Email" />
-						<input type="password" placeholder="Password" />
-						<button class="buttn">Sign Up</button>
-					</form>
-				</div>
-
-				<!-- signIn -->
-				<div class="form-container sign-in-container">
-					<form action="#">
-						<h1>Sign in</h1>
-						<span>Please use the email of your account</span>
-						<input type="email" placeholder="Email" />
-						<input type="password" placeholder="Password" />
-						<a class="fyp" href="#">Forgot your password?</a>
-						<button class="buttn">Sign In</button>
-					</form>
-				</div>
-
-				<!-- The unselected option -->
-				<div class="overlay-container">
-					<div class="overlay">
-						<div class="overlay-panel overlay-left">
-							<h1>Welcome Back!</h1>
-							<p>Signed out? Why not sign in again.</p>
-							<button class="ghost" id="signIn">Sign In</button>
-						</div>
-						<div class="overlay-panel overlay-right">
-							<h1>Hello, Friend!</h1>
-							<p>Join the community and let's grow up together.</p>
-							<button class="ghost" id="signUp">Sign Up</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- button -->
-	<input type="button" class="s3-btn" name="open" onclick="popupOpen();" value="SignIn/SignUp">
-</body>
-
-<script src="/main.js"></script>
-<script src="/pop.js"></script>
+   <!-- SCRIPT -->
+   <script src="/main.js"></script>
+   <script src="/pop.js"></script>
 </body>
 </html>
-
-<!-- https://codepen.io/Shaz3e/pen/jEZpJW -->

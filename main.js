@@ -1,11 +1,13 @@
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
+const signinBtn = document.querySelector('.signinBtn');
+const signupBtn = document.querySelector('.signupBtn');
+const formBx = document.querySelector('.formBx');
+const body = document.querySelector('body')
 
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
-
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
-});
+signupBtn.onclick = function(){
+    formBx.classList.add('active')
+    body.classList.add('active')
+}
+signinBtn.onclick = function(){
+    formBx.classList.remove('active')
+    body.classList.remove('active')
+}
